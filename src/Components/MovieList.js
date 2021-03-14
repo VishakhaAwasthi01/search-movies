@@ -1,13 +1,24 @@
 import React from 'react'
 import './Movies.css'
+import { useHistory } from 'react-router-dom'
+
 const MoviesList = (props) => {
+  let history = useHistory()
+  function handleClick(movieId) {
+    history.push(`/movie_details?movieName=${movieId}`)
+  }
+
   return (
     <div className="justify-content-start flex flex-wrap flex-row  movies">
       {props?.movies &&
         props?.movies?.map((each, i) => {
           return (
             <>
-              <div key={i} className="posterClass m-3" onClick={props?.onClick}>
+              <div
+                key={i}
+                className="posterClass"
+                onClick={() => handleClick(each?.imdbID)}
+              >
                 <img
                   className=" p-3"
                   src={each?.Poster}
