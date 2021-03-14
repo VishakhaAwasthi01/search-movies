@@ -1,0 +1,40 @@
+.App {
+  font-family: sans-serif;
+  width: fit-content;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.mainDiv {
+  height: 100%;
+}
+.mainDiv > .row {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.each_movie {
+  margin: 20px;
+}
+.inputClass {
+  width: 400px !important;
+}
+.posterClass {
+  position: relative;
+  width: 300px;
+  transition: transform 0.2s;
+}
+.posterClass:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 320px) {
+  .inputClass {
+    width: 200px !important;
+  }
+}
