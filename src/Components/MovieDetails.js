@@ -8,7 +8,7 @@ const MovieDetails = () => {
   const movieId = Detailsurl.searchParams.get('movieName')
 
   const getMovieDetails = async (moviesId) => {
-    const url = `http://www.omdbapi.com/?i=${moviesId}&apikey=3a319feb`
+    const url = `https://www.omdbapi.com/?i=${moviesId}&apikey=3a319feb`
     const detailResponse = await fetch(url)
     const convertDetailToJSON = await detailResponse?.json()
     setMovieDetails(convertDetailToJSON)

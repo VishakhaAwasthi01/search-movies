@@ -6,7 +6,7 @@ function Movies() {
   const [movies, setMovies] = useState([])
   const [searchMovie, setSearchMovie] = useState('')
   const getAllMovies = async (searchMovie) => {
-    const url = `http://www.omdbapi.com/?s=${searchMovie}&apikey=3a319feb`
+    const url = `https://www.omdbapi.com/?s=${searchMovie}&apikey=3a319feb`
     const res = await fetch(url)
     const convertToJSON = await res.json()
     setMovies(convertToJSON?.Search || '')
