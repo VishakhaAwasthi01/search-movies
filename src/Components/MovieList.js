@@ -9,7 +9,7 @@ const MoviesList = (props) => {
   }
 
   return (
-    <div className="justify-content-start flex flex-wrap flex-row  movies">
+    <div className="justify-content-start flex flex-wrap flex-row justify-content-lg-center movies">
       {props?.movies &&
         props?.movies?.map((each, i) => {
           return (
